@@ -13,6 +13,7 @@
 		05C861FC2FFA294300520AA8 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
 		05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
 		05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05FAD3C62FFA85EC00FCB3E2 /* Garlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FAD3C52FFA85EB00FCB3E2 /* Garlic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		05FAD3B12FFA854100FCB3E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		05C57C0D2FFA44D500821794 /* Garlic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Garlic.h; path = ../../Source/Garlic.h; sourceTree = "<group>"; };
 		05C57C0E2FFA44D500821794 /* Garlic.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Garlic.docc; sourceTree = "<group>"; };
@@ -40,6 +53,9 @@
 		05C861F92FFA294300520AA8 /* GList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GList.h; sourceTree = "<group>"; };
 		05C861FA2FFA294300520AA8 /* GList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GList.c; sourceTree = "<group>"; };
 		05DBBD5E2FFA4BCA00FDF2E1 /* Garlic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Garlic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FAD3B32FFA854100FCB3E2 /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FAD3C32FFA85C800FCB3E2 /* Garlic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Garlic.xcframework; path = ../../../Library/Frameworks/Garlic.xcframework; sourceTree = "<group>"; };
+		05FAD3C52FFA85EB00FCB3E2 /* Garlic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Garlic.framework; path = "../../../Library/Frameworks/Garlic.xcframework/macos-arm64_x86_64/Garlic.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,6 +77,12 @@
 			path = Garlic_iOS;
 			sourceTree = "<group>";
 		};
+		05FAD3B42FFA854100FCB3E2 /* Test */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			name = Test;
+			path = ../Test;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05FAD3B02FFA854100FCB3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05FAD3C62FFA85EC00FCB3E2 /* Garlic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +128,8 @@
 				05DBBD5F2FFA4BCA00FDF2E1 /* Garlic_iOS */,
 				05C861F82FFA279400520AA8 /* Source */,
 				05C57C112FFA453E00821794 /* Document */,
+				05FAD3B42FFA854100FCB3E2 /* Test */,
+				05FAD3C22FFA85C700FCB3E2 /* Frameworks */,
 				05C861EC2FFA26CD00520AA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +139,7 @@
 			children = (
 				05C861EB2FFA26CD00520AA8 /* Garlic.framework */,
 				05DBBD5E2FFA4BCA00FDF2E1 /* Garlic.framework */,
+				05FAD3B32FFA854100FCB3E2 /* UnitTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +168,15 @@
 				05C57C0D2FFA44D500821794 /* Garlic.h */,
 			);
 			path = Garlic_macOS;
+			sourceTree = "<group>";
+		};
+		05FAD3C22FFA85C700FCB3E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05FAD3C52FFA85EB00FCB3E2 /* Garlic.framework */,
+				05FAD3C32FFA85C800FCB3E2 /* Garlic.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +266,28 @@
 			productReference = 05DBBD5E2FFA4BCA00FDF2E1 /* Garlic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		05FAD3B22FFA854100FCB3E2 /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05FAD3B72FFA854100FCB3E2 /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				05FAD3AF2FFA854100FCB3E2 /* Sources */,
+				05FAD3B02FFA854100FCB3E2 /* Frameworks */,
+				05FAD3B12FFA854100FCB3E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				05FAD3B42FFA854100FCB3E2 /* Test */,
+			);
+			name = UnitTest;
+			packageProductDependencies = (
+			);
+			productName = UnitTest;
+			productReference = 05FAD3B32FFA854100FCB3E2 /* UnitTest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,6 +304,9 @@
 						CreatedOnToolsVersion = 26.6;
 					};
 					05EEA4482FFA52DB0011AB32 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					05FAD3B22FFA854100FCB3E2 = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -261,6 +328,7 @@
 				05C861EA2FFA26CD00520AA8 /* Garlic_macOS */,
 				05DBBD5D2FFA4BCA00FDF2E1 /* Garlic_iOS */,
 				05EEA4482FFA52DB0011AB32 /* install */,
+				05FAD3B22FFA854100FCB3E2 /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05FAD3AF2FFA854100FCB3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +676,34 @@
 			};
 			name = Release;
 		};
+		05FAD3B82FFA854100FCB3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks/Garlic.xcframework/macos-arm64_x86_64",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05FAD3B92FFA854100FCB3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TR2DNF3P93;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks/Garlic.xcframework/macos-arm64_x86_64",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -636,6 +739,15 @@
 			buildConfigurations = (
 				05EEA4492FFA52DB0011AB32 /* Debug */,
 				05EEA44A2FFA52DB0011AB32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05FAD3B72FFA854100FCB3E2 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05FAD3B82FFA854100FCB3E2 /* Debug */,
+				05FAD3B92FFA854100FCB3E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

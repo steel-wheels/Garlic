@@ -1,9 +1,8 @@
 //
-//  Garlic.h
-//  Garlic
+//  UTList.c
+//  UnitTest
 //
 //  Created by Tomoo Hamada on 2026/07/05.
 //
 
-#import <Garlic/GList.h>
-
+#include "UTList.h"

@@ -14,3 +14,5 @@ FOUNDATION_EXPORT double Garlic_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char Garlic_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Garlic_iOS/PublicHeader.h>
+
+#import <Garlic/GList.h>

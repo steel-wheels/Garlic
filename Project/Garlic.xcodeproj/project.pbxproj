@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */ = {isa = PBXBuildFile; fileRef = 05C57C0E2FFA44D500821794 /* Garlic.docc */; };
 		05C57C102FFA44D500821794 /* Garlic.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C57C0D2FFA44D500821794 /* Garlic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05C861FB2FFA294300520AA8 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; };
+		05C861FB2FFA294300520AA8 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05C861FC2FFA294300520AA8 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
 		05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
-		05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; };
+		05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		05DBBD642FFA4BCA00FDF2E1 /* Exceptions for "Garlic_iOS" folder in "Garlic_iOS" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			publicHeaders = (
-				Garlic_iOS.h,
+				Garlic.h,
 			);
 			target = 05DBBD5D2FFA4BCA00FDF2E1 /* Garlic_iOS */;
 		};

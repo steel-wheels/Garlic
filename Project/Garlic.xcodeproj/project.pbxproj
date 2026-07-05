@@ -14,6 +14,10 @@
 		05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
 		05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05FAD3C62FFA85EC00FCB3E2 /* Garlic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FAD3C52FFA85EB00FCB3E2 /* Garlic.framework */; };
+		05FAD3CC2FFA999800FCB3E2 /* GLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = 05FAD3CB2FFA999800FCB3E2 /* GLibrary.c */; };
+		05FAD3CD2FFA999800FCB3E2 /* GLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FAD3CA2FFA999800FCB3E2 /* GLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05FAD3CE2FFA999800FCB3E2 /* GLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = 05FAD3CB2FFA999800FCB3E2 /* GLibrary.c */; };
+		05FAD3CF2FFA999800FCB3E2 /* GLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FAD3CA2FFA999800FCB3E2 /* GLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05C57C0D2FFA44D500821794 /* Garlic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Garlic.h; path = ../../Source/Garlic.h; sourceTree = "<group>"; };
+		05C57C0D2FFA44D500821794 /* Garlic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garlic.h; sourceTree = "<group>"; };
 		05C57C0E2FFA44D500821794 /* Garlic.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Garlic.docc; sourceTree = "<group>"; };
 		05C57C122FFA457A00821794 /* Garlic.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Garlic.md; sourceTree = "<group>"; };
 		05C861EB2FFA26CD00520AA8 /* Garlic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Garlic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +67,8 @@
 		05FAD3B32FFA854100FCB3E2 /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FAD3C32FFA85C800FCB3E2 /* Garlic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Garlic.xcframework; path = ../../../Library/Frameworks/Garlic.xcframework; sourceTree = "<group>"; };
 		05FAD3C52FFA85EB00FCB3E2 /* Garlic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Garlic.framework; path = "../../../Library/Frameworks/Garlic.xcframework/macos-arm64_x86_64/Garlic.framework"; sourceTree = "<group>"; };
+		05FAD3CA2FFA999800FCB3E2 /* GLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLibrary.h; sourceTree = "<group>"; };
+		05FAD3CB2FFA999800FCB3E2 /* GLibrary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GLibrary.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -154,6 +160,7 @@
 		05C861F82FFA279400520AA8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				05FAD3C92FFA996500FCB3E2 /* Library */,
 				05C861FD2FFA294F00520AA8 /* Memory */,
 			);
 			name = Source;
@@ -186,6 +193,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		05FAD3C92FFA996500FCB3E2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				05FAD3CA2FFA999800FCB3E2 /* GLibrary.h */,
+				05FAD3CB2FFA999800FCB3E2 /* GLibrary.c */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -193,6 +209,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FAD3CD2FFA999800FCB3E2 /* GLibrary.h in Headers */,
 				05C57C102FFA44D500821794 /* Garlic.h in Headers */,
 				05C861FB2FFA294300520AA8 /* GList.h in Headers */,
 			);
@@ -202,6 +219,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FAD3CF2FFA999800FCB3E2 /* GLibrary.h in Headers */,
 				05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +383,7 @@
 			files = (
 				05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */,
 				05C861FC2FFA294300520AA8 /* GList.c in Sources */,
+				05FAD3CC2FFA999800FCB3E2 /* GLibrary.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */,
+				05FAD3CE2FFA999800FCB3E2 /* GLibrary.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

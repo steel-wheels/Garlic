@@ -21,26 +21,31 @@ static struct GList *          s_free_list ;
 static inline struct GListPool *
 allocateListPool(void)
 {
-        return malloc(sizeof(struct GListPool)) ;
+        struct GListPool * newpool = malloc(sizeof(struct GListPool)) ;
+        newpool->next = NULL ;
+        return newpool ;
 }
 
 static struct GList *
-appendLists(struct GListPool * pool, struct GList * next)
+appendLists(struct GListPool * pool)
 {
-        for(unsigned int i=0 ; i < MAX_LIST_NUM ; i++){
-                (pool->lists[i]).data   = NULL ;
-                (pool->lists[i]).next   = next ;
-                next = &(pool->lists[i]) ;
+        struct GList * head = &(pool->lists[0]) ;
+        struct GList * prev = head ;
+        for(unsigned int i=1 ; i < MAX_LIST_NUM ; i++){
+                struct GList * next = &(pool->lists[i]) ;
+                next->data = NULL ;
+                next->next = NULL ;
+                prev->next = next ;
+                prev = next ;
         }
-        return next ;
+        return head ;
 }
 
 void
 GInitListPool(void)
 {
         s_list_pool = allocateListPool() ;
-        s_list_pool->next = NULL ;
-        s_free_list = appendLists(s_list_pool, NULL) ;
+        s_free_list = appendLists(s_list_pool) ;
 }
 
 struct GList *
@@ -50,7 +55,7 @@ GAllocateList(void)
                 struct GListPool * newpool = allocateListPool() ;
                 s_list_pool->next = newpool ;
                 s_list_pool = newpool ;
-                s_free_list = appendLists(newpool, NULL) ;
+                s_free_list = appendLists(newpool) ;
         }
         struct GList * result = s_free_list ;
         s_free_list = s_free_list->next ;
@@ -70,7 +75,7 @@ GCountOfFreeLists(void)
 {
         uint64_t        count = 0 ;
         struct GList *  list = s_free_list ;
-        while(list->next != NULL){
+        while(list != NULL){
                 list = list->next ;
                 count += 1 ;
         }

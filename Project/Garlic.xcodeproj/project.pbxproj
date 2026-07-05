@@ -31,6 +31,13 @@
 			remoteGlobalIDString = 05C861EA2FFA26CD00520AA8;
 			remoteInfo = Garlic_macOS;
 		};
+		05FAD3C72FFA8ABB00FCB3E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C861E22FFA26CD00520AA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EEA4482FFA52DB0011AB32;
+			remoteInfo = install;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -277,6 +284,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				05FAD3C82FFA8ABB00FCB3E2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				05FAD3B42FFA854100FCB3E2 /* Test */,
@@ -387,6 +395,11 @@
 			isa = PBXTargetDependency;
 			target = 05C861EA2FFA26CD00520AA8 /* Garlic_macOS */;
 			targetProxy = 05EEA44E2FFA52ED0011AB32 /* PBXContainerItemProxy */;
+		};
+		05FAD3C82FFA8ABB00FCB3E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EEA4482FFA52DB0011AB32 /* install */;
+			targetProxy = 05FAD3C72FFA8ABB00FCB3E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

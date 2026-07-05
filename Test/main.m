@@ -5,12 +5,14 @@
 //  Created by Tomoo Hamada on 2026/07/05.
 //
 
-#import <Foundation/Foundation.h>
+#import <Garlic/Garlic.h>
+#import "UTList.h"
 
-int main(int argc, const char * argv[]) {
-        @autoreleasepool {
-            // insert code here...
-            NSLog(@"Hello, World!");
-        }
-        return EXIT_SUCCESS;
+int main(int argc, const char * argv[])
+{
+        bool result = true ;
+
+        result &= TestList() ;
+
+        return result ? 0 : -1 ;
 }

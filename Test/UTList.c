@@ -6,3 +6,8 @@
 //
 
 #include "UTList.h"
+
+bool
+TestList(void) {
+        return true ;
+}

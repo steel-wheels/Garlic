@@ -8,6 +8,7 @@
 #ifndef GLIST_H
 #define GLIST_H
 
+#include <stdbool.h>
 #include <unistd.h>
 
 struct GList {

@@ -10,4 +10,7 @@
 
 #import <Garlic/Garlic.h>
 
+bool
+TestList(void) ;
+
 #endif /* UTList_h */

@@ -7,36 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */ = {isa = PBXBuildFile; fileRef = 05C57C0E2FFA44D500821794 /* Garlic.docc */; };
+		05C57C102FFA44D500821794 /* Garlic.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C57C0D2FFA44D500821794 /* Garlic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05C861FB2FFA294300520AA8 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; };
 		05C861FC2FFA294300520AA8 /* GList.c in Sources */ = {isa = PBXBuildFile; fileRef = 05C861FA2FFA294300520AA8 /* GList.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05C57C0D2FFA44D500821794 /* Garlic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garlic.h; sourceTree = "<group>"; };
+		05C57C0E2FFA44D500821794 /* Garlic.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Garlic.docc; sourceTree = "<group>"; };
+		05C57C122FFA457A00821794 /* Garlic.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Garlic.md; sourceTree = "<group>"; };
 		05C861EB2FFA26CD00520AA8 /* Garlic_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Garlic_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C861F92FFA294300520AA8 /* GList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GList.h; sourceTree = "<group>"; };
 		05C861FA2FFA294300520AA8 /* GList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GList.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		05C861F22FFA26CD00520AA8 /* Exceptions for "Garlic_macOS" folder in "Garlic_macOS" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			publicHeaders = (
-				Garlic.h,
-			);
-			target = 05C861EA2FFA26CD00520AA8 /* Garlic_macOS */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		05C861ED2FFA26CD00520AA8 /* Garlic_macOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				05C861F22FFA26CD00520AA8 /* Exceptions for "Garlic_macOS" folder in "Garlic_macOS" target */,
-			);
-			path = Garlic_macOS;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05C861E82FFA26CD00520AA8 /* Frameworks */ = {
@@ -49,11 +33,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05C57C112FFA453E00821794 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				05C57C0E2FFA44D500821794 /* Garlic.docc */,
+				05C57C122FFA457A00821794 /* Garlic.md */,
+			);
+			name = Document;
+			path = ../../Document;
+			sourceTree = "<group>";
+		};
 		05C861E12FFA26CD00520AA8 = {
 			isa = PBXGroup;
 			children = (
-				05C861ED2FFA26CD00520AA8 /* Garlic_macOS */,
 				05C861F82FFA279400520AA8 /* Source */,
+				05C57C112FFA453E00821794 /* Document */,
 				05C861EC2FFA26CD00520AA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +63,7 @@
 		05C861F82FFA279400520AA8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				05C57C0D2FFA44D500821794 /* Garlic.h */,
 				05C861FD2FFA294F00520AA8 /* Memory */,
 			);
 			name = Source;
@@ -91,6 +86,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C57C102FFA44D500821794 /* Garlic.h in Headers */,
 				05C861FB2FFA294300520AA8 /* GList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,9 +106,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				05C861ED2FFA26CD00520AA8 /* Garlic_macOS */,
 			);
 			name = Garlic_macOS;
 			packageProductDependencies = (
@@ -169,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */,
 				05C861FC2FFA294300520AA8 /* GList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

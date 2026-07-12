@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0540CE3D30032D3C000FFBBF /* GMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 0540CE3C30032D3C000FFBBF /* GMemory.c */; };
+		0540CE3E30032D3C000FFBBF /* GMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0540CE3B30032D3C000FFBBF /* GMemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0540CE3F30032D3C000FFBBF /* GMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0540CE3B30032D3C000FFBBF /* GMemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0540CE4030032D3C000FFBBF /* GMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 0540CE3C30032D3C000FFBBF /* GMemory.c */; };
 		05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */ = {isa = PBXBuildFile; fileRef = 05C57C0E2FFA44D500821794 /* Garlic.docc */; };
 		05C57C102FFA44D500821794 /* Garlic.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C57C0D2FFA44D500821794 /* Garlic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05C861FB2FFA294300520AA8 /* GList.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C861F92FFA294300520AA8 /* GList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0540CE3B30032D3C000FFBBF /* GMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMemory.h; sourceTree = "<group>"; };
+		0540CE3C30032D3C000FFBBF /* GMemory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GMemory.c; sourceTree = "<group>"; };
 		05C57C0D2FFA44D500821794 /* Garlic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Garlic.h; sourceTree = "<group>"; };
 		05C57C0E2FFA44D500821794 /* Garlic.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Garlic.docc; sourceTree = "<group>"; };
 		05C57C122FFA457A00821794 /* Garlic.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Garlic.md; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 			children = (
 				05C861F92FFA294300520AA8 /* GList.h */,
 				05C861FA2FFA294300520AA8 /* GList.c */,
+				0540CE3B30032D3C000FFBBF /* GMemory.h */,
+				0540CE3C30032D3C000FFBBF /* GMemory.c */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			files = (
 				05FAD3CD2FFA999800FCB3E2 /* GLibrary.h in Headers */,
 				05C57C102FFA44D500821794 /* Garlic.h in Headers */,
+				0540CE3E30032D3C000FFBBF /* GMemory.h in Headers */,
 				05C861FB2FFA294300520AA8 /* GList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FAD3CF2FFA999800FCB3E2 /* GLibrary.h in Headers */,
+				0540CE3F30032D3C000FFBBF /* GMemory.h in Headers */,
 				05DBBD6A2FFA4C5B00FDF2E1 /* GList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +393,7 @@
 			files = (
 				05C57C0F2FFA44D500821794 /* Garlic.docc in Sources */,
 				05C861FC2FFA294300520AA8 /* GList.c in Sources */,
+				0540CE3D30032D3C000FFBBF /* GMemory.c in Sources */,
 				05FAD3CC2FFA999800FCB3E2 /* GLibrary.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +404,7 @@
 			files = (
 				05DBBD692FFA4C5B00FDF2E1 /* GList.c in Sources */,
 				05FAD3CE2FFA999800FCB3E2 /* GLibrary.c in Sources */,
+				0540CE4030032D3C000FFBBF /* GMemory.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

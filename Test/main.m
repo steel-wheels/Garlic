@@ -7,6 +7,7 @@
 
 #import <Garlic/Garlic.h>
 #import "UTList.h"
+#import "UTMemory.h"
 #import <stdio.h>
 
 static void
@@ -18,6 +19,7 @@ int main(int argc, const char * argv[])
 
         init() ;
         result &= TestList() ;
+        result &= TestMemory() ;
 
         return result ? 0 : -1 ;
 }

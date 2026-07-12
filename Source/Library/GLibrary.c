@@ -7,9 +7,12 @@
 
 #include "GLibrary.h"
 #include "GList.h"
+#include "GMemory.h"
 
 void
 GInitLibrary(void)
 {
         GInitListPool() ;
+        GInitMemory() ;
+
 }

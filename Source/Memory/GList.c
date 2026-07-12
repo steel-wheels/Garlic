@@ -59,6 +59,7 @@ GAllocateList(void)
         }
         struct GList * result = s_free_list ;
         s_free_list = s_free_list->next ;
+        result->data = NULL ; result->next = NULL ;
         return result ;
 }
 

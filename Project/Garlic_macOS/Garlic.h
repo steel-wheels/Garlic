@@ -8,3 +8,5 @@
 #import <Garlic/GLibrary.h>
 #import <Garlic/GList.h>
 #import <Garlic/GMemory.h>
+#import <Garlic/GString.h>
+

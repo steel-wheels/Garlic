@@ -9,6 +9,8 @@
 #include "GMemory.h"
 #include <string.h>
 
+#define INT(V)  ((int) V)
+
 static unsigned long
 min(size_t a, size_t b)
 {
@@ -69,5 +71,40 @@ GFreeString(struct GString * dst)
                 GFreeStringBody(next) ;
         }
         GFree(G_STRING_UNIT_SIZE, dst) ;
+}
+
+static int
+GCompareStringBodyWithNormal(const struct GStringBody * src0, const char * src1, size_t len)
+{
+        size_t minlen = min(len, GSubstringBodyLength()) ;
+        int    diff ;
+        if((diff = strncmp(src0->substring, src1, minlen)) != 0){
+                return diff ;
+        }
+        if(len > minlen) {
+                return GCompareStringBodyWithNormal(src0->next, src1 + minlen, len - minlen) ;
+        } else {
+                return 0 ;
+        }
+}
+
+int
+GCompareStringWithNormal(const struct GString * src0, const char * src1)
+{
+        size_t len0 = src0->length ;
+        size_t len1 = strlen(src1) ;
+        if(len0 != len1){
+                return INT(len0) - INT(len1) ;
+        }
+        size_t minlen = min(len0, GSubstringLength()) ;
+        int    diff ;
+        if((diff = strncmp(src0->substring, src1, minlen)) != 0){
+                return diff ;
+        }
+        if(len0 > minlen) {
+                return GCompareStringBodyWithNormal(src0->next, src1 + minlen, len0 - minlen) ;
+        } else {
+                return 0 ;
+        }
 }
 

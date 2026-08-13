@@ -23,6 +23,12 @@ int main(int argc, const char * argv[])
         result &= TestMemory() ;
         result &= TestString() ;
 
+        if(result){
+                puts("Summary: Pass") ;
+        } else {
+                puts("Summary: Fail") ;
+        }
+
         return result ? 0 : -1 ;
 }
 

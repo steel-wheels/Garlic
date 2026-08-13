@@ -50,4 +50,7 @@ GAllocateStringFromSource(const char * src) ;
 void
 GFreeString(struct GString * dst) ;
 
+int
+GCompareStringWithNormal(const struct GString * src0, const char * src1) ;
+
 #endif /* GSTRING_H */
